@@ -1,5 +1,5 @@
 // Party class
-class Party {
+class Party { 
 	// Constructor for Party
 	constructor(days) {
 		this.days = days
