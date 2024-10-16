@@ -7,6 +7,7 @@ class Competition {
 	}
 	// Generate a competition name
 	getName() {
+		const competitionStart = new List(words.competition.start).sample();
 		const competitionStart = COMPETITION_START.sample();
 		const competitionEnd = COMPETITION_END.sample();
 		const competitionType = COMPETITION_TYPE.sample();
