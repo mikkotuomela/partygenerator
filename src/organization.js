@@ -1,18 +1,19 @@
 // Organization class
 class Organization {
-	constructor() {}
+	constructor() {
+    this.name = this._getRandomName();
+  }
 }
 
 class Group extends Organization {
 	constructor() {
 		super();
-		this.name = this.getName();
 		console.log(`Group created: ${this.name}`);
 	}
 	// Get a cool group name
-	getName() {
-		const groupStart = words.group.start.sample();
-		const groupEnd = words.group.end.sample();
+	_getRandomName() {
+		const groupStart = words.group.start.random();
+		const groupEnd   = words.group.end.random();
 		return `${groupStart}${groupEnd}`;
 	}
 }
@@ -21,19 +22,18 @@ class Group extends Organization {
 class Company extends Organization {
 	constructor() {
 		super();
-		this.name = this.getName();
-		this.type = words.company.type.sample();
-		this.fullName = this.getFullName();
+		this.type     = words.company.type.random();
+		this.fullName = this._getFullName();
 		console.log(`Company created: ${this.name}`);
 	}
 	// Get a random company name
-	getName() {
+	_getRandomName() {
 		const companyStart = words.company.start.sample();
-		const companyEnd = words.company.end.sample();
+		const companyEnd   = words.company.end.sample();
 		return `${companyStart}${companyEnd}`;
 	}
 	// Get full company name
-	getFullName() {
+	_getFullName() {
 		return `${this.name} ${this.type}`;
 	}
 }
