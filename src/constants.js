@@ -38,7 +38,7 @@ var words = {};
 wordLists.forEach(theme => {
   words[theme] = {};
   wordLists[theme].each(key => {
-    words[theme][key] = new WordList(wordLists[theme][key]);
+    words[theme][key] = wordList[theme][key].split(' ');
   });
 });
 
