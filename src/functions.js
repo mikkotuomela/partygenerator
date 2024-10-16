@@ -1,14 +1,9 @@
-// List class
-class WordList {
-	constructor(list) {
-		this.list  = list;
-		this.items = list.split(' ');
-	}
-	sample() {
-		return this.items[rand(this.items.length, 0)];
-	}
+// Get a random integer between min and max
+function rand(min, max) {
+	return Math.floor(Math.random() * (max - min)) + min;
 }
 
+// Add random() method to array prototype
 Array.prototype.random = function () {
   return this[rand(this.length, 0)];
 }
@@ -23,15 +18,4 @@ function testFaker() {
 		console.log('Faker is not available');
 		return false;
 	}
-}
-
-// Get a random integer between min and max
-function rand(min, max) {
-	return Math.floor(Math.random() * (max - min)) + min;
-}
-
-// Helper function to sample items from a string-based list
-function sample(items) {
-	items = items.split(' ');
-	return items[rand(items.length, 0)];
 }
