@@ -2,13 +2,10 @@
 class Party { 
 	// Constructor for Party
 	constructor(days) {
-		this.days = days
-		this.name = this.getName();
-		this.startDate = this.getDate(this.days);
-		this.endDate = this.getDate(days + 2);
-		this.year = this.startDate.getFullYear();
-		this.formattedStartDate = this.getFormattedDate(this.startDate);
-		this.formattedEndDate = this.getFormattedDate(this.endDate);
+		this.days      = days
+		this.name      = this.getName();
+		this.startDate = new PartyDate(days);
+		this.endDate   = new PartyDate(days + 2);
 		if (FAKER_AVAILABLE) {
 			this.city = faker.address.city();
 			this.country = faker.address.country();
@@ -39,18 +36,6 @@ class Party {
 			competitionsText += `${competition.name}<br />`;
 		});
 		return competitionsText;
-	}
-	// Get a date in the future
-	getDate(futureDays) {
-		let currentDate = new PartyDate();
-		let futureDate = new Date(currentDate);
-		futureDate.setDate(currentDate.getDate() + futureDays);
-		return futureDate;
-	}
-	// Format a date
-	getFormattedDate(date) {
-		const options = { year: 'numeric', month: 'long', day: 'numeric' };
-		return date.toLocaleDateString(LOCALE, options);
 	}
 	// Get a random party name
 	getName() {
