@@ -32,7 +32,7 @@ const wordLists = {
     type:  'Demo Demo Demo Demo Intro Intro Dentro Graphics Graphics Knitting Poetry Video Gaming Gaming Hacking Cosplay Music Music Sound Zoomer Effect Throwing Boozing Visuals VJ DJ Dancing',
     word:  'Competition Performance Competition Competition Contest Showdown',
   }
-}
+};
 
 // Convert everything into real arrays
 var words = {};
@@ -50,4 +50,4 @@ const config = {
   locale:         'en-US',
   competitions:   10,
   fakerAvailable: testFaker(),
-}
+};
