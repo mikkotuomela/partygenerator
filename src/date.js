@@ -5,6 +5,7 @@ class PartyDate extends Date {
     this.setDate(this.getDate() + days);
     this.text = this._getFormattedText();
     this.year = this.getFullYear();
+    console.log(`PartyDate created: ${this.text}`);
   }
   // Get nicely formatted date
   _getFormattedText()  {

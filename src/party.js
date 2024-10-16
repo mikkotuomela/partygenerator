@@ -5,6 +5,7 @@ class Party {
 		this.name      = this._getRandomName();
 		this.startDate = new PartyDate(days);
 		this.endDate   = new PartyDate(days + 2);
+    this.year      = this.startDate.year;
 		if (config.fakerAvailable) {
 			this.city    = faker.address.city();
 			this.country = faker.address.country();
@@ -14,7 +15,7 @@ class Party {
 	// Full party generation
 	generate() {
 		this.invitation   = new Invitation();
-    this.invParty     = new this.constructor(days - 30);
+    this.invParty     = new this.constructor(this.days - 30);
 	  this.mainSponsor  = new Company();
 		this.venue        = new Venue();
 		this.headOrg      = new Scener();

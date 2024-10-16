@@ -19,3 +19,15 @@ function testFaker() {
 		return false;
 	}
 }
+
+// Convert word lists into real arrays
+function getWords(lists) {
+  let words = {};
+  Object.keys(lists).forEach(theme => {
+    words[theme] = {};
+    Object.keys(lists[theme]).forEach(key => {
+      words[theme][key] = lists[theme][key].split(' ');
+    });
+  });
+  return words;
+}

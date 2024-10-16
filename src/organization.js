@@ -28,8 +28,8 @@ class Company extends Organization {
 	}
 	// Get a random company name
 	_getRandomName() {
-		const companyStart = words.company.start.sample();
-		const companyEnd   = words.company.end.sample();
+		const companyStart = words.company.start.random();
+		const companyEnd   = words.company.end.random();
 		return `${companyStart}${companyEnd}`;
 	}
 	// Get full company name
