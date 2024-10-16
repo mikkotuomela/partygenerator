@@ -2,6 +2,7 @@
 class Program {
   constructor() {
     this.competitions = _getRandomCompetitions();
+	  this.competitionsHtml = _getCompetitionsHtml();
   }
   // Generate competitions
 	_getRandomCompetitions() {
@@ -11,7 +12,7 @@ class Program {
 		return competitions;
 	}
 	// Get text version of competition list
-	getCompetitionsText() {
+	_getCompetitionsHtml() {
 		let competitionsText = '';
 		this.competitions.forEach(competition => {
 			competitionsText += `${competition.name}<br />`;
