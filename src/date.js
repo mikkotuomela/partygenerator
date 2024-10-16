@@ -8,8 +8,8 @@ class PartyDate extends Date {
   }
   // Get nicely formatted date
   getFormattedText()  {
-		const options = { year: 'numeric', month: 'long', day: 'numeric' };
-		return this.toLocaleDateString(config.locale, options);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return this.toLocaleDateString(config.locale, options);
   }
 }
 
