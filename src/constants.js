@@ -33,7 +33,7 @@ const wordLists = {
   }
 }
 
-// Convert everything into List objects
+// Convert everything into real arrays
 var words = {};
 wordLists.forEach(theme => {
   words[theme] = {};
