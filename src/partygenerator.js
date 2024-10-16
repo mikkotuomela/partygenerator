@@ -16,7 +16,7 @@ function run() {
 	const htmlElements = ["competitions"];
 	const output = {
 		title:        `${party.name} ${party.year}`,
-		date:         `From ${party.startDate.textg} to ${party.endDate.text}`,
+		date:         `From ${party.startDate.text} to ${party.endDate.text}`,
 		venue:        `Party place: ${party.venue.name} (capacity: ${party.venue.capacity} computer places!!!) in ${party.city}, ${party.country}!`,
 		head:         `Head organizer: ${party.headOrg.nameWithFullHandle}`,
 		inv:          `Check out our invitation intro released on ${invParty.startDate.text} at ${invParty.name} ${invParty.year} in ${invParty.city}, ${invParty.country}!`,
