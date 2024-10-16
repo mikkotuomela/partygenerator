@@ -4,7 +4,7 @@ class Person {
 		this.firstName = words.name.first.random();
 		this.lastName  = words.name.last.random();
 		this.name      = `${this.firstName} ${this.lastName}`;
-    this.title = words.name.title.random();
+    this.title     = words.name.title.random();
 		console.log(`Person created: ${this.name}`);
 	}
 }
