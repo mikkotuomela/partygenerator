@@ -42,7 +42,7 @@ class Party {
 	}
 	// Get a date in the future
 	getDate(futureDays) {
-		let currentDate = new Date();
+		let currentDate = new PartyDate();
 		let futureDate = new Date(currentDate);
 		futureDate.setDate(currentDate.getDate() + futureDays);
 		return futureDate;
