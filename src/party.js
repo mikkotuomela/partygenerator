@@ -6,7 +6,7 @@ class Party {
 		this.name      = this.getName();
 		this.startDate = new PartyDate(days);
 		this.endDate   = new PartyDate(days + 2);
-		if (FAKER_AVAILABLE) {
+		if (config.fakerAvailable) {
 			this.city    = faker.address.city();
 			this.country = faker.address.country();
 		}
@@ -38,9 +38,9 @@ class Party {
 	}
 	// Get a random party name
 	getName() {
-		const partyStart  = words.party.start.sample();
-		const partyMiddle = words.party.middle.sample();
-		const partyEnd    = words.party.end.sample();
+		const partyStart  = words.party.start.random();
+		const partyMiddle = words.party.middle.random();
+		const partyEnd    = words.party.end.random();
 		return `${partyStart} ${partyMiddle} ${partyEnd}`;
 	}
 }
