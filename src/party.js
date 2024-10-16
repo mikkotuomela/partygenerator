@@ -1,6 +1,5 @@
 // Party class
 class Party { 
-	// Constructor for Party
 	constructor(days) {
 		this.days      = days
 		this.name      = this._getRandomName();
