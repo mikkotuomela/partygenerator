@@ -23,7 +23,7 @@ class Competitions extends ProgramTrack {
   constructor() {
     super();
     this.competitions = this._getRandomCompetitions();
-    this.html         = this._getCompetitionsHtml();
+    this.html         = this._getHtml();
   }
   // Generate competitions
 	_getRandomCompetitions() {
@@ -33,7 +33,7 @@ class Competitions extends ProgramTrack {
 		return competitions;
 	}
 	// Get text version of competition list
-	_getCompetitionsHtml() {
+	_getHtml() {
 		let competitionsText = '';
 		this.competitions.forEach(competition => {
 			competitionsText += `${competition.name}<br />`;
