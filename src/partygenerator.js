@@ -7,7 +7,7 @@ Probably doesn't work with IE because of template literals :------D
 function run() {
 
 	// Generate the party
-	const days         = Math.floor(Math.random() * DAY_RANGE) + MIN_DAYS;	
+	const days         = Math.floor(Math.random() * config.dayRange) + config.minDays;
 	const party        = new Party(days);
 	party.generate();
 
