@@ -13,7 +13,7 @@ function run() {
 
 	// Generate output
 	const invParty     = party.invitation.party;
-	const htmlElements = ["competitions"];
+	const htmlElements = ['competitions'];
 	const output = {
 		title:        `${party.name} ${party.year}`,
 		date:         `From ${party.startDate.text} to ${party.endDate.text}`,
@@ -22,14 +22,14 @@ function run() {
 		inv:          `Check out our invitation intro released on ${invParty.startDate.text} at ${invParty.name} ${invParty.year} in ${invParty.city}, ${invParty.country}!`,
 		sponsor:      `Main sponsor: ${party.mainSponsor.fullName}`,
 		competitions: `We have the following competitions:<br />${party.getCompetitionsText()}`,
-		generator:    "",
+		generator:    '',
 	}
 	
 	// Insert output using jQuery
 	Object.keys(output).forEach(key => {
 		htmlElements.includes(key)
-			? $("#" + key).html(output[key])
-			: $("#" + key).text(output[key]);
+			? $('#' + key).html(output[key])
+			: $('#' + key).text(output[key]);
 	})
 	
 }
