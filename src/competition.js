@@ -7,10 +7,10 @@ class Competition {
 	}
 	// Generate a competition name
 	getRandomName() {
-		const competitionStart = words.competition.start.sample();
-		const competitionEnd   = words.competition.end.sample();
-		const competitionType  = words.competition.type.sample();
-		const competitionWord  = words.competition.word.sample();
+		const competitionStart = words.competition.start.random();
+		const competitionEnd   = words.competition.end.random();
+		const competitionType  = words.competition.type.random();
+		const competitionWord  = words.competition.word.random();
 		let competitionName    = `${competitionStart} ${competitionEnd} ${competitionType} ${competitionWord}`;
 
     // Random modifications
