@@ -5,10 +5,11 @@ class ProgramTrack {
   }
 }
 
+// Speakers class
 class Speakers extends ProgramTrack {
   constructor() {
     super();
-    this.speakers = _getRandomSpeakers();
+    this.speakers = this._getRandomSpeakers();
   }
   // Get random speakers
   _getRandomSpeakers() {
@@ -21,8 +22,8 @@ class Speakers extends ProgramTrack {
 class Competitions extends ProgramTrack {
   constructor() {
     super();
-    this.competitions = _getRandomCompetitions();
-    this.competitionsHtml = _getCompetitionsHtml();
+    this.competitions = this._getRandomCompetitions();
+    this.html         = this._getCompetitionsHtml();
   }
   // Generate competitions
 	_getRandomCompetitions() {
