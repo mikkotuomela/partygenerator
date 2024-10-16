@@ -1,11 +1,19 @@
-// Person class
+// Person superclass
 class Person {
 	constructor() {
 		this.firstName = words.name.first.random();
 		this.lastName  = words.name.last.random();
 		this.name      = `${this.firstName} ${this.lastName}`;
+    this.title = words.name.title.random();
 		console.log(`Person created: ${this.name}`);
 	}
+}
+
+// Speaker class
+class Speaker extends Person {
+  constructor() {
+    super();
+  }
 }
 
 // Scener class
