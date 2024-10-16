@@ -3,7 +3,7 @@ class Party {
 	// Constructor for Party
 	constructor(days) {
 		this.days      = days
-		this.name      = this.getName();
+		this.name      = this._getRandomName();
 		this.startDate = new PartyDate(days);
 		this.endDate   = new PartyDate(days + 2);
 		if (config.fakerAvailable) {
@@ -18,26 +18,26 @@ class Party {
 		this.mainSponsor  = new Company();
 		this.venue        = new Venue();
 		this.headOrg      = new Scener();
-		this.competitions = this.getCompetitions();
+		this.competitions = this._getCompetitions();
 		console.log(`Party generated: ${this.name} ${this.year}`);
 	}
 	// Generate competitions
-	getCompetitions() {
+	_getCompetitions() {
 		let competitions = [];
 		for (let competition_i = 0; competition_i < config.competitions; competition_i++)
 			competitions.push(new Competition());
 		return competitions;
 	}
 	// Get text version of competition list
-	getCompetitionsText() {
-		let competitionsText = "";
+	_getCompetitionsText() {
+		let competitionsText = '';
 		this.competitions.forEach(competition => {
 			competitionsText += `${competition.name}<br />`;
 		});
 		return competitionsText;
 	}
 	// Get a random party name
-	getName() {
+	_getRandomName() {
 		const partyStart  = words.party.start.random();
 		const partyMiddle = words.party.middle.random();
 		const partyEnd    = words.party.end.random();
