@@ -14,28 +14,14 @@ class Party {
 	}
 	// Full party generation
 	generate() {
-		this.invitation   = new Production(this.days - 60);
+		this.invitation   = new Invitation();
+    this.invParty     = new this.constructor(days - 30);
 		this.mainSponsor  = new Company();
 		this.venue        = new Venue();
 		this.headOrg      = new Scener();
-		this.competitions = this._getCompetitions();
+    this.program      = new Program();
 		console.log(`Party generated: ${this.name} ${this.year}`);
-	}
-	// Generate competitions
-	_getCompetitions() {
-		let competitions = [];
-		for (let competition_i = 0; competition_i < config.competitions; competition_i++)
-			competitions.push(new Competition());
-		return competitions;
-	}
-	// Get text version of competition list
-	_getCompetitionsText() {
-		let competitionsText = '';
-		this.competitions.forEach(competition => {
-			competitionsText += `${competition.name}<br />`;
-		});
-		return competitionsText;
-	}
+  }
 	// Get a random party name
 	_getRandomName() {
 		const partyStart  = words.party.start.random();
