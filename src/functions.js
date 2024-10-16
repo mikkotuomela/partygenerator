@@ -10,7 +10,7 @@ Array.prototype.random = function () {
 
 // Test if faker is available
 function testFaker() {
-	try {
+  try {
 		const test = faker.address.city();
 		console.log('Faker is available');
 		return true;
