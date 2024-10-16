@@ -1,9 +1,9 @@
 // Words for name generation
 const wordLists = {
   party: {
-    start:  'New Finnish Best Oldschool Retro Swedish Japanese Special Illegal Small Random Generic Stolen Last Final First Drunk Obscure Christian Ultimate The The The Another That Weird Alternative',
-    middle: 'Summer Winter Alternative Sauna C64 Amiga Atari Apple Dark Demo Booze Vodka Coding GFX CGI AI Machine Perl Hacker Data Cracker Stork Group Intro MSX Färjan Bar Restaurant Train Mod Hardware Horror LAN',
-    end:    'Party Event Meeting Copyparty Gathering Party Party Megaparty Artparty Evening Weekend Assembly Afterparty Jamboree Conference Convention Unconference Workshop Jam Cruise',
+    start:  'New Finnish Best Oldschool Retro Swedish Dark Japanese Satanic Beginner Special Illegal Small Random Generic Stolen Last Final First Drunk Obscure Christian Ultimate The The The Another That Weird Alternative',
+    middle: 'Summer Winter Alternative Sauna C64 Amiga Atari Apple Demo Booze Vodka Coding GFX CGI AI Machine Perl Hacker Data Cracker Stork Group Intro MSX Färjan Bar Restaurant Train Mod Hardware Horror LAN',
+    end:    'Party Event Meeting Happening Encounter Copyparty Gathering Party Party Megaparty Artparty Evening Weekend Assembly Afterparty Jamboree Conference Convention Unconference Workshop Jam Cruise',
   },
   company: {
     start:  'Fish Tech Graph Angry Micro Mega Best Computer Game Video',
@@ -16,14 +16,15 @@ const wordLists = {
   name: {
     first:  'Mikko Kristoffer Felice Anni Kim Matti Chris Nick Pekka Al Jeff',
     last:   'Tuomela Lawson Murtosaari Viljanen Koskimies Spowart Lowe Minter Virtanen Smith Hubbard Laakkonen Aakko',
+    title:  'Dr Dr Dr Prof Mr Mrs Miss',
   },
   handle: {
     start:  'Fake Big Bad Cute Dark Murder Laser Darth Dr Mr Sir Mrs Miss Professor Real True Mini Max Pissed Wiz Lol Bass Magic Rave Cereal Techno',
     end:    'Wolf Nut Pharaoh Jesus Buddha Nuke Space Planet God Cat Kitty Bat Cadet Coder Wizard Ninja Girl Boy Guy Vader Killer Bob Wizard Witch Hacker Conan Arnold Punk Pope Geisha Shogun Emperor King Queen Prince Princess Duke Nuke Joker',
   },
   group: {
-    start: 'Wild Dark Elite Amiga Gold Cool Complex Byte Anarchy Virtual Psycho Mad',
-    end:   'Coders Group Team Pirates Dreams Crew Men Guys Boys',
+    start: 'Wild Dark Elite Amiga Gold Cool Complex Byte Anarchy Virtual Witch Rogue Hell Satan God Alt Weird Wizard Lizard Cyber Kyber Cipher Code Cracker Freak Party Insane Sick Crazy Psycho Mad Rad Wicked Future Beyond Defence Digi Maxi',
+    end:   'Coders Group Team Pirates Dreams Crew Men Guys Boys Girls Hackers Kids',
   },
   competition: {
     start: 'Automated Robotic Impossible Radical Political Unofficial Uncensored Reverse Alternative Dynamic Unlimited 1-on-1 Oldschool Realtime Tiny Live Extreme Inverted Beginner Real Obscure Executable Themed Freestyle Textmode Funniest Ridiculous Silent Quiet Slow Fast Simulated Emulated Kinky Classic Random Combined 1970s 1980s 1990s',
@@ -50,4 +51,3 @@ const config = {
   competitions:   10,
   fakerAvailable: testFaker(),
 }
-
