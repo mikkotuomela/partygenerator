@@ -1,7 +1,6 @@
 // Production class
 class Production {
-	constructor(days) {
-		this.party = new Party(days);
+	constructor() {
     this.name = this._getRandomName();
     console.log(`Production created: ${this.name}`);
 	}
