@@ -10,13 +10,13 @@ class Party {
 			this.city    = faker.address.city();
 			this.country = faker.address.country();
 		}
-		console.log(`Party created: ${this.name} ${this.year}`);
+	  console.log(`Party created: ${this.name} ${this.year}`);
 	}
 	// Full party generation
 	generate() {
 		this.invitation   = new Invitation();
     this.invParty     = new this.constructor(days - 30);
-		this.mainSponsor  = new Company();
+	  this.mainSponsor  = new Company();
 		this.venue        = new Venue();
 		this.headOrg      = new Scener();
     this.program      = new Program();
