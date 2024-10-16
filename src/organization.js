@@ -10,7 +10,7 @@ class Group extends Organization {
 		super();
 		console.log(`Group created: ${this.name}`);
 	}
-	// Get a cool group name
+	// Get a cool random group name
 	_getRandomName() {
 		const groupStart = words.group.start.random();
 		const groupEnd   = words.group.end.random();
