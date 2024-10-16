@@ -1,7 +1,7 @@
 // Program class
 class Program {
   constructor() {
-    this.competitions = _getRandomCompetitions();
+    this.competitions     = _getRandomCompetitions();
 	  this.competitionsHtml = _getCompetitionsHtml();
   }
   // Generate competitions
