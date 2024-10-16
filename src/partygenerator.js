@@ -12,7 +12,7 @@ function run() {
 	party.generate();
 
 	// Generate output
-	const invParty     = party.invitation.party;
+	const invParty     = party.invitationParty;
 	const htmlElements = ['competitions'];
 	const output = {
 		title:        `${party.name} ${party.year}`,
