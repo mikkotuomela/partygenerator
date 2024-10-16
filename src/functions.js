@@ -1,5 +1,5 @@
 // List class
-class List {
+class WordList {
 	constructor(list) {
 		this.list = list;
 		this.items = list.split(" ");
