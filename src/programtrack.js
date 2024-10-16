@@ -5,6 +5,19 @@ class ProgramTrack {
   }
 }
 
+class Speakers extends ProgramTrack {
+  constructor() {
+    super();
+    this.speakers = _getRandomSpeakers();
+  }
+  // Get random speakers
+  _getRandomSpeakers() {
+    let speakers = [];
+    for (let speaker_i = 0; speaker_i < config.speakers; speaker_i++)
+      speakers.push(new Speaker());
+  }
+}
+
 class Competitions extends ProgramTrack {
   constructor() {
     super();
