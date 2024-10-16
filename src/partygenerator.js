@@ -21,7 +21,7 @@ function run() {
 		head:         `Head organizer: ${party.headOrg.nameWithFullHandle}`,
 		inv:          `Check out our invitation intro released on ${invParty.startDate.text} at ${invParty.name} ${invParty.year} in ${invParty.city}, ${invParty.country}!`,
 		sponsor:      `Main sponsor: ${party.mainSponsor.fullName}`,
-		competitions: `We have the following competitions:<br />${party.program.getCompetitionsText()}`,
+		competitions: `We have the following competitions:<br />${party.program.competitionsHtml}`,
 		generator:    '',
 	}
 	
