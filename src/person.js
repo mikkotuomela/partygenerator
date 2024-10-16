@@ -1,8 +1,8 @@
 // Person class
 class Person {
 	constructor() {
-		this.firstName = words.name.first.sample();
-		this.lastName  = words.name.last.sample();
+		this.firstName = words.name.first.random();
+		this.lastName  = words.name.last.random();
 		this.name      = `${this.firstName} ${this.lastName}`;
 		console.log(`Person created: ${this.name}`);
 	}
@@ -12,15 +12,15 @@ class Person {
 class Scener extends Person {
 	constructor() {
 		super();
-		this.handle = this.getHandle();
+		this.handle = this._getRandomHandle();
 		this.group  = new Group();
 		this.nameWithHandle     = `${this.firstName} "${this.handle}" ${this.lastName}`;
 		this.nameWithFullHandle = `${this.firstName} "${this.handle}/${this.group.name}" ${this.lastName}`;
 	}
 	// Get scene handle
-	getHandle() {
-		const handleStart = words.handle.start.sample();
-		const handleEnd   = words.handle.end.sample();
+	_getRandomHandle() {
+		const handleStart = words.handle.start.random();
+		const handleEnd   = words.handle.end.random();
 		return `${handleStart}${handleEnd}`;
 	}
 }
