@@ -5,14 +5,25 @@ class Person {
 		this.lastName  = words.name.last.random();
 		this.name      = `${this.firstName} ${this.lastName}`;
     this.title     = words.name.title.random();
+    this.ageInDays = this._getRandomAgeInDays();
+    this.birthday  = this._getBirthday();
 		console.log(`Person created: ${this.name}`);
 	}
+  // Get birthday for this person
+  _getBirthday() {
+    const birthday = new Date();
+    birthday.setDate(birthday.getDate() - this.ageInDays);
+    return birthday;
+  }
 }
 
 // Speaker class
 class Speaker extends Person {
   constructor() {
     super();
+  }
+  _getRandomAgeInDays() {
+    return rand(config.universe.age.speakers.min * 365, config.universe.age.speakers.max * 365);
   }
 }
 
@@ -31,4 +42,8 @@ class Scener extends Person {
 		const handleEnd   = words.handle.end.random();
 		return `${handleStart}${handleEnd}`;
 	}
+  // Get random age in days
+  _getRandomAgeInDays() {
+    return rand(config.universe.age.sceners.min * 365, config.universe.age.sceners.max * 365);
+  }
 }
