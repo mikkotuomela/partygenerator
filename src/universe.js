@@ -1,7 +1,7 @@
 // Universe class
 class Universe {
   constructor() {
-    this.sceners   = this._getRandomitems(Scener, config.universe.population.sceners);
+    this.sceners   = this._getRandomItems(Scener, config.universe.population.sceners);
     this.companies = this._getRandomItems(Company, config.universe.population.companies);
   }
   // Get one scener
