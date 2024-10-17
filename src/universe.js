@@ -12,10 +12,16 @@ class Universe {
   }
   // Get one scener
   getScener() {
-    return this.sceners.pop();
+    return this.people.sceners.pop();
+  }
+  geGamer() {
+    return this.people.gamers.pop();
   }
   getCompany() {
-    return this.companies.pop();
+    return this.organizations.companies.pop();
+  }
+  getGroup() {
+    return this.organizations.groups.pop();
   }
   _getRandomItems(ItemType, itemPopulation) {
     let items = [];
