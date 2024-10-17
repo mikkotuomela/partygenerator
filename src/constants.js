@@ -16,7 +16,7 @@ const wordLists = {
   name: {
     first:  'Mikko Kristoffer Felice Anni Kim Matti Chris Nick Pekka Al Jeff',
     last:   'Tuomela Lawson Murtosaari Viljanen Koskimies Spowart Lowe Minter Virtanen Smith Hubbard Laakkonen Aakko',
-    title:  'Dr Dr Dr Prof Mr Mrs Miss',
+    title:  'Dr Dr Dr Prof Mr Mrs Miss CEO CTO CIO',
   },
   handle: {
     start:  'Fake Big Bad Cute Dark Murder Laser Darth Dr Mr Sir Mrs Miss Professor Real True Mini Max Pissed Wiz Lol Bass Magic Rave Cereal Techno',
@@ -27,10 +27,10 @@ const wordLists = {
     end:    'Coders Group Team Pirates Dreams Crew Men Guys Boys Girls Hackers Kids',
   },
   competition: {
-    start:  'Automated Robotic Impossible Radical Political Unofficial Uncensored Reverse Alternative Dynamic Unlimited 1-on-1 Oldschool Realtime Tiny Live Extreme Inverted Beginner Real Obscure Executable Themed Freestyle Textmode Funniest Ridiculous Silent Quiet Slow Fast Simulated Emulated Kinky Classic Random Combined 1970s 1980s 1990s',
-    end:    'Wild Vallejo Short Färjan Calculator Supercomputer BASIC MSX Analogue Invitation 1-bit Perl Java Flash Steampunk MIDI ProTracker AGA VGA 3DO PlayStation Generated Fractal Art Crack Hardware Nintendo Data Computer Software Plasma Phong Gouraud Mainframe Bootsector Crayon Game 3D 2D 4k 256B Roguelike Amiga C64 Fake Spectrum AI Party',
-    type:   'Demo Demo Demo Demo Intro Intro Dentro Graphics Graphics Knitting Poetry Video Gaming Gaming Hacking Cosplay Music Music Sound Zoomer Effect Throwing Boozing Visuals VJ DJ Dancing',
-    word:   'Competition Performance Competition Competition Contest Showdown',
+    start:  'Automated Robotic Impossible Radical Fantasy Scripted Amateur Professional Homebrew Homemade Competitive Underwater X-rated Silent Artistic Epic Political Nude Unlimited Occult Unofficial Uncensored Reverse Alternative Dynamic Unlimited 1-on-1 Oldschool Realtime Tiny Live Extreme Inverted Beginner Real Obscure Executable Themed Freestyle Textmode Funniest Ridiculous Silent Quiet Slow Fast Simulated Emulated Criminal Kinky Classic Random Combined 1970s 1980s 1990s',
+    end:    'Wild Vallejo Short Shader Färjan Calculator Supercomputer BASIC MSX Analogue Invitation 1-bit Perl Java Flash Steampunk MIDI ProTracker AGA VGA 3DO PlayStation Generated Fractal Art Crack Hardware Nintendo Data Computer Software Plasma Phong Gouraud Mainframe Bootsector Crayon Game BBS 3D 2D 4k 256B Roguelike Amiga C64 Fake Spectrum AI Party',
+    type:   'Demo Demo Demo Demo Intro Intro Dentro Graphics Graphics Namevoting Metaprogramming Knitting Poetry Video Gaming Gaming Hacking Cosplay Music Music Sound Zoomer Effect Throwing Boozing Coding Visuals VJ DJ Dancing',
+    word:   'Competition Performance Competition Competition Contest Showdown Tournament',
   }
 };
 
