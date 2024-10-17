@@ -44,4 +44,14 @@ const config = {
   locale:         'en-US',
   competitions:   10,
   fakerAvailable: testFaker(),
+  universe: {
+    population: {
+      sceners:   300,
+      companies: 20,
+      artists:   20,
+      parties:   20,
+      academics: 20,
+      gamers:    500,
+    },
+  },
 };
