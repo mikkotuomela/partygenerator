@@ -5,6 +5,7 @@ class Universe {
   }
   // Process the whole universe
   _process() {
+    var universe = {}
     // Loop through all item types in universe
     Object.keys(universe).forEach(key => {
      // Loop through all subtypes in universe 
