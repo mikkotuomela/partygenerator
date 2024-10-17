@@ -14,7 +14,7 @@ class Universe {
   getScener() {
     return this.people.sceners.pop();
   }
-  geGamer() {
+  getGamer() {
     return this.people.gamers.pop();
   }
   getCompany() {
