@@ -1,10 +1,11 @@
 // Organization class
 class Organization {
-	constructor() {
+  constructor() {
     this.name = this._getRandomName();
   }
 }
 
+// Group class
 class Group extends Organization {
 	constructor() {
 		super();
@@ -35,5 +36,29 @@ class Company extends Organization {
 	// Get full company name
 	_getFullName() {
 		return `${this.name} ${this.type}`;
+	}
+}
+
+// Association class
+class Association extends Organization {
+	constructor() {
+		super();
+		console.log(`Association created: ${this.name}`);
+	}
+	// Get a  random association name
+	_getRandomName() {
+		return "Association";
+	}
+}
+
+// Association class
+class Foundation extends Organization {
+	constructor() {
+		super();
+		console.log(`Foundation created: ${this.name}`);
+	}
+	// Get a random foundation name
+	_getRandomName() {
+		return "Foundation";
 	}
 }

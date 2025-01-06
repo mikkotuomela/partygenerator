@@ -38,7 +38,7 @@ const wordLists = {
 const words = getWords(wordLists);
 
 // Other constants
-const config = {
+const config_old = {
   minDays:        180,
   dayRange:       300,
   locale:         'en-US',
