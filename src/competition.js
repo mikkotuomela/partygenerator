@@ -1,7 +1,7 @@
 // Competition class
 class Competition {
 	constructor() {
-		this.sponsor = new Company();
+		this.sponsor = universe.getCompany();
 		this.name    = this._getRandomName();
 		console.log(`Competition created: ${this.name}`);
 	}

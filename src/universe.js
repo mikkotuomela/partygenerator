@@ -1,18 +1,38 @@
 // Configuration for the universe
 const config = {
-  minDays:         180,
-  dayRange:        300,
-  locale:          'en-US',
-  competitions:    10,
-  fakerAvailable:  testFaker(),
+  minDays:        180,
+  dayRange:       300,
+  locale:         'en-US',
+  competitions:   10,
+  fakerAvailable: testFaker(),
   universe: {
-    group:       30,
-    company:     10,
-    association: 5,
-    foundation:  5,
-    person:      100,
-    speaker:     10,
-    scener:      500
+    group: {
+      population: 30
+    },
+    company: {
+      population: 10
+    },
+    association: {
+      population: 5
+    },
+    foundation: {
+      population: 5
+    },
+    person: {
+      population: 100,
+      minAge:     10,
+      maxAge:     55
+    },
+    speaker: {
+      population: 10,
+      minAge:     25,
+      maxAge:     65
+    },
+    scener: {
+      population: 500,
+      minAge:     23,
+      maxAge:     55
+    }
   }
 };
 
@@ -20,10 +40,10 @@ const config = {
 class Universe {
 
   // Build the universe
-  constructor() {
+  constructor(universe) {
     // Get class map and universe config
     this.classMap = this._getClassMap();
-    this.universe = config.universe;
+    this.universe = universe;
 
     // Loop through all item types in universe
     Object.keys(this.universe).forEach(entityType => {
@@ -34,7 +54,7 @@ class Universe {
   // Generate as many instances as the population says
   _getRandomEntities(entityType) {
     let items = [];
-    for (let i = 0; i < this.universe[entityType]; i++) {
+    for (let i = 0; i < this.universe[entityType].population; i++) {
         const newEntity = new this.classMap[entityType]();
         this[entityType].push(newEntity);
     }
@@ -71,3 +91,5 @@ class Universe {
   getFoundation()  { return this._getEntity('group');   }
 
 }
+
+const universe = new Universe(config.universe);

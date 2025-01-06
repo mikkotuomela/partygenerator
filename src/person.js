@@ -9,6 +9,10 @@ class Person {
     this.birthday  = this._getBirthday();
 		console.log(`Person created: ${this.name}`);
 	}
+  // Get a random age for this person
+  _getRandomAgeInDays() {
+    return rand(config.universe.person.minAge * 365, config.universe.person.maxAge * 365);
+  }
   // Get birthday for this person
   _getBirthday() {
     const birthday = new Date();
@@ -23,7 +27,7 @@ class Speaker extends Person {
     super();
   }
   _getRandomAgeInDays() {
-    return rand(config.universe.age.speakers.min * 365, config.universe.age.speakers.max * 365);
+    return rand(config.universe.speaker.minAge * 365, config.universe.speaker.maxAge * 365);
   }
 }
 
@@ -32,7 +36,7 @@ class Scener extends Person {
 	constructor() {
 		super();
 		this.handle = this._getRandomHandle();
-		this.group  = new Group();
+		this.group  = universe.getGroup();
 		this.nameWithHandle     = `${this.firstName} "${this.handle}" ${this.lastName}`;
 		this.nameWithFullHandle = `${this.firstName} "${this.handle}/${this.group.name}" ${this.lastName}`;
 	}
@@ -44,6 +48,6 @@ class Scener extends Person {
 	}
   // Get random age in days
   _getRandomAgeInDays() {
-    return rand(config.universe.age.sceners.min * 365, config.universe.age.sceners.max * 365);
+    return rand(config.universe.scener.minAge * 365, config.universe.scener.maxAge * 365);
   }
 }

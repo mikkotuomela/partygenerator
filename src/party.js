@@ -16,9 +16,9 @@ class Party {
 	generate() {
 		this.invitation   = new Invitation();
     this.invParty     = new this.constructor(this.days - 30);
-	  this.mainSponsor  = new Company();
+	  this.mainSponsor  = universe.getCompany()
 		this.venue        = new Venue();
-		this.headOrg      = new Scener();
+		this.headOrg      = universe.getScener()
     this.program      = new Program();
 		console.log(`Party generated: ${this.name} ${this.year}`);
   }

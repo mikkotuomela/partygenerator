@@ -7,7 +7,7 @@ class Venue {
 	}
 	// Get a random venue name
 	_getRandomName() {
-		const company = new Company();
+		const company = universe.getCompany();
 		return `${company.name} ${words.venue.end.random()}`;
 	}
 }
