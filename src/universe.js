@@ -14,9 +14,8 @@ class Universe {
         const n = config.universe.population[key][type];
         const ItemClass = this._getClass(key);
         this[key] = [];
-        for (let item_i = 0; item_i < n, item_i++) {
+        for (let item_i = 0; item_i < n; item_i++)
           this[key][type].push(new ItemClass());
-        }
       });
     });
   }
@@ -45,9 +44,8 @@ class Universe {
   _getRandomItems(ItemType, itemPopulation) {
     let items = [];
     const population = config.universe.population[item];
-    for (let item_i = 0; item_i < population, item_i++) {
+    for (let item_i = 0; item_i < population; item_i++)
       items.push(new ItemType());
-    }
     return items;
   }
 }
