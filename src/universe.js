@@ -32,6 +32,11 @@ const config = {
       population: 500,
       minAge:     23,
       maxAge:     55
+    },
+    gamer: {
+      population: 500,
+      minAge:     9,
+      maxAge:     35
     }
   }
 };
@@ -54,22 +59,22 @@ class Universe {
   // Generate as many instances as the population says
   _getRandomEntities(entityType) {
     let items = [];
-    for (let i = 0; i < this.universe[entityType].population; i++) {
-        const newEntity = new this.classMap[entityType]();
-        this[entityType].push(newEntity);
-    }
+    for (let i = 0; i < this.universe[entityType].population; i++)
+        items.push(new this.classMap[entityType]());
     return items;
   }
 
   // Get class based on its name
   _getClassMap() {
     return {
-      scener: Scener,
-      gamer: Gamer,
-      group: Group,
-      company: Company,
+      person:      Person,
+      scener:      Scener,
+      speaker:     Speaker,
+      gamer:       Gamer,
+      group:       Group,
+      company:     Company,
       association: Association,
-      foundation: Foundation
+      foundation:  Foundation
     };
   }
 
@@ -92,4 +97,6 @@ class Universe {
 
 }
 
+// Create the universe
+console.log("Now creating the universe");
 const universe = new Universe(config.universe);

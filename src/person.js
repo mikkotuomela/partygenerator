@@ -7,7 +7,7 @@ class Person {
     this.title     = words.name.title.random();
     this.ageInDays = this._getRandomAgeInDays();
     this.birthday  = this._getBirthday();
-		console.log(`Person created: ${this.name}`);
+		//console.log(`Person created: ${this.name}`);
 	}
   // Get a random age for this person
   _getRandomAgeInDays() {
@@ -31,12 +31,22 @@ class Speaker extends Person {
   }
 }
 
+// Gamer class
+class Gamer extends Person {
+  constructor() {
+    super();
+  }
+  _getRandomAgeInDays() {
+    return rand(config.universe.gamer.minAge * 365, config.universe.gamer.maxAge * 365);
+  }
+}
+
 // Scener class
 class Scener extends Person {
 	constructor() {
 		super();
 		this.handle = this._getRandomHandle();
-		this.group  = universe.getGroup();
+		this.group  = new Group();
 		this.nameWithHandle     = `${this.firstName} "${this.handle}" ${this.lastName}`;
 		this.nameWithFullHandle = `${this.firstName} "${this.handle}/${this.group.name}" ${this.lastName}`;
 	}

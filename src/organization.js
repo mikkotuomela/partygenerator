@@ -9,7 +9,7 @@ class Organization {
 class Group extends Organization {
 	constructor() {
 		super();
-		console.log(`Group created: ${this.name}`);
+		//console.log(`Group created: ${this.name}`);
 	}
 	// Get a cool random group name
 	_getRandomName() {
@@ -25,7 +25,7 @@ class Company extends Organization {
 		super();
 		this.type     = words.company.type.random();
 		this.fullName = this._getFullName();
-		console.log(`Company created: ${this.name}`);
+		//console.log(`Company created: ${this.name}`);
 	}
 	// Get a random company name
 	_getRandomName() {
@@ -43,7 +43,7 @@ class Company extends Organization {
 class Association extends Organization {
 	constructor() {
 		super();
-		console.log(`Association created: ${this.name}`);
+		//console.log(`Association created: ${this.name}`);
 	}
 	// Get a  random association name
 	_getRandomName() {
@@ -55,7 +55,7 @@ class Association extends Organization {
 class Foundation extends Organization {
 	constructor() {
 		super();
-		console.log(`Foundation created: ${this.name}`);
+		//console.log(`Foundation created: ${this.name}`);
 	}
 	// Get a random foundation name
 	_getRandomName() {
