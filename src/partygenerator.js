@@ -42,7 +42,9 @@ function run() {
 		htmlElements.includes(key)
 			? $('#' + key).html(output[key])
 			: $('#' + key).text(output[key]);
-	})
+	});
+  //$('#success').show();
+  party.success ? $('#success').show() : $('#failure').show();
 	
 }
 

@@ -51,6 +51,11 @@ class Party {
     this.damage             = rand(0, 1) == 0 ? -this.ticketsTotal * rand(1, 10) : 0;
     this.prizeMoney         = -this.combinedTotal / 10 * rand(10, 100) * 0.01;
     this.totalResult        = this.totalIncome + this.totalExpenses + this.damage + this.prizeMoney;
+
+    // Success?
+    this.success            = this.totalResult >= 0;
+    this.failure            = !this.success;
+
   }
 	// Get a random party name
 	_getRandomName() {
