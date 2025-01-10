@@ -61,6 +61,7 @@ class Scener extends Person {
 		this.group  = new Group();
 		this.nameWithHandle     = `${this.firstName} "${this.handle}" ${this.lastName}`;
 		this.nameWithFullHandle = `${this.firstName} "${this.handle}/${this.group.name}" ${this.lastName}`;
+    this.fullHandle         = `${this.handle} / ${this.group.name}`;
 	}
 	// Get scene handle
 	_getRandomHandle() {

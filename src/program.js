@@ -3,6 +3,5 @@ class Program {
   constructor() {
     this.competitions = new Competitions();
     this.speakers     = new Speakers();
-    console.log(this.speakers.html);
   }
 }

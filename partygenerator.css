@@ -26,6 +26,11 @@ p {
 	font-weight: bold;
 }
 
+#events {
+  margin-left: 20%;
+  margin-right: 20%
+}
+
 .competition {
   font-size: 24px;
 }

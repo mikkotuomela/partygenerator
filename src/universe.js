@@ -4,6 +4,7 @@ const config = {
   dayRange:       300,
   locale:         'en-US',
   competitions:   rand(7, 11),
+  sponsors:       rand(3, 6),
   fakerAvailable: testFaker(),
   universe: {
     group: {
@@ -80,7 +81,6 @@ class Universe {
 
   // Pop one entity and check if new ones need to be created
   _getEntity(entityType) {
-    console.log(`Returning entity: ${entityType}`);
     const newEntity = this[entityType].pop();
     if (this[entityType].length == 0)
       this[entityType] = this._getRandomEntities(entityType);

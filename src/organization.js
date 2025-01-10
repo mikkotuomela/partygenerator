@@ -5,6 +5,16 @@ class Organization {
   }
 }
 
+// Supplier class (a company etc. that provides stuff for money)
+class Supplier extends Organization {
+  constructor() {
+    super();
+  }
+  _getRandomName() {
+    return '(outside supplier)';
+  }
+}
+
 // Group class
 class Group extends Organization {
 	constructor() {
@@ -32,7 +42,7 @@ class Company extends Organization {
 	_getRandomName() {
 		const companyStart = words.company.start.random();
 		const companyEnd   = words.company.end.random();
-    const space = rand(0, 1) == 1 ? ' ' : '';
+    const space        = rand(0, 1) == 1 ? ' ' : '';
 		return `${companyStart}${space}${companyEnd}`;
 	}
 	// Get full company name
@@ -47,9 +57,13 @@ class Association extends Organization {
 		super();
 		//console.log(`Association created: ${this.name}`);
 	}
-	// Get a  random association name
+	// Get a random association name
 	_getRandomName() {
-		return "Association";
+		const associationStart = words.association.start.random();
+		const associationEnd   = words.association.end.random();
+    const associationType  = words.association.type.random();
+		const association      = `${associationStart} ${associationEnd} ${associationType}`;
+    return association
 	}
 }
 
@@ -63,7 +77,7 @@ class Foundation extends Organization {
 	_getRandomName() {
 		const foundationStart = words.foundation.start.random();
 		const foundationEnd   = words.foundation.end.random();
-		const foundation = `${foundationStart} ${foundationEnd}`;
+		const foundation      = `${foundationStart} ${foundationEnd}`;
     return rand(0, 1) == 0 ? `Foundation for ${foundation}` : `${foundation} Foundation`;
 	}
 }

@@ -7,19 +7,24 @@ const wordLists = {
   },
   company: {
     start:  'Fish Tech Graph Angry Micro Mega Best Computer Fun Rad Space Game Video Cloud Up Down Scene Bit House Blood Future Super Hyper Cyber Techno Steam Game Rock',
-    end:    'Birds Wizards Hub Tube App Team Cloud House Marque Crew Soft Tech Craft Team Coders Works Net Machines',
+    end:    'Birds Wizards Hub Tube App Team Cloud House Space Universe Marque Crew Soft Tech Craft Team Coders Works Net Machines',
     type:   'Ltd Oy Oyj Plc Corp Corporation Inc',
   },
+  association: {
+    start: 'Technology Professional Mental Crazy Tech Health C64 Amiga Internet Network Electronic Bitcoin Crypto Alternative Space Science Research Radical Graphics Demoscene Finland Assembly Coding Political',
+    end:   'Protection Fund Support Promotion Fun Booze Worship Archive TV Video Frontiers Revolution Workers Union Forever Party Friends Seniors Students',
+    type:  'Association Group Club Fund Party Team'
+  },
   foundation: {
-    start: 'Technology Tech Health Internet Network Electronic Graphics Demoscene Finland Assembly Coding Political',
-    end:   'Protection Fund Support Promotion Frontiers Workers Union Forever Friends Seniors'
+    start: 'Technology Tech Crypto International National Health Internet Network Electronic Disruptive Bitcoin Revolutionary Graphics Demoscene Finland Assembly Coding Political',
+    end:   'Protection Fund Support Promotion Frontiers Revolution Workers Union Forever Friends Seniors'
   },
   venue: {
     end:    'Hall Colosseum Stadium Arena Center eSportsCenter eSportsArena Theatre Cinema Sauna Room Basement Restaurant Club',
   },
   name: {
-    first:  'Mikko Kristoffer Felice Anni Kim Matti Chris Nick Pekka Al Jeff',
-    last:   'Tuomela Lawson Murtosaari Viljanen Koskimies Spowart Lowe Minter Virtanen Smith Hubbard Laakkonen Aakko',
+    first:  'Mikko Kristoffer Felice Anni Kim Matti Chris Nick Pekka Al Jeff John Petteri Suvi Pirita Jan-Peter Jussi Milja Tuomas Taneli Kris Jeri Patrick Jonne Bill Peter Timo Ahti Michael James Martti Ville-Matias Jonathan Len',
+    last:   'Tuomela Lawson Murtosaari Viljanen Koskimies Spowart Lowe Minter Virtanen Smith Hubbard Laakkonen Aakko Bristow Ellsworth Korhonen Smith Brown Gates Ballmer Ng Chandrasekhar Bond Ahtisaari Heikkilä',
     title:  'Dr. Dr. Dr. Prof. Mr. Mr. Mx. Ms. Ms.',
     job:    'CIO CTO CFO CEO President Chairman Chairperson Producer Founder Co-Founder ex-CEO Developer Coder Artist Recruiter Boss Director Lawyer'
   },
