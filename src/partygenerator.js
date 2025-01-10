@@ -13,16 +13,16 @@ function run() {
 
 	// Generate output
 	const invParty     = party.invParty;
-	const htmlElements = ['competitions'];
+	const htmlElements = ['venue', 'head', 'sponsor', 'competitions', 'speakers'];
 	const output = {
 		title:        `${party.name} ${party.year}`,
-		date:         `From ${party.startDate.text} to ${party.endDate.text}`,
-		venue:        `Party place: ${party.venue.name} (capacity: ${party.venue.capacity} computer places!!!) in ${party.city}, ${party.country}!`,
-		head:         `Head organizer: ${party.headOrg.nameWithFullHandle}`,
+		date:         `${party.startDate.text} - ${party.endDate.text}`,
+		venue:        `Party place: <b>${party.venue.name}</b> (capacity: ${party.venue.capacity} computer places!!!) in ${party.city}, ${party.country}!`,
+		head:         `Head organizer: <b>${party.headOrg.nameWithFullHandle}</b>`,
 		inv:          `Check out our invitation intro released on ${invParty.startDate.text} at ${invParty.name} ${invParty.year} in ${invParty.city}, ${invParty.country}!`,
-		sponsor:      `Main sponsor: ${party.mainSponsor.fullName}`,
+		sponsor:      `Main sponsor: <b>${party.mainSponsor.fullName}</b>`,
 		competitions: `We have the following competitions:<br />${party.program.competitions.html}`,
-		generator:    '',
+		speakers:     `Do not miss our speakers:<br />${party.program.speakers.html}`
 	}
 	
 	// Insert output using jQuery

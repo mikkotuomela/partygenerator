@@ -25,13 +25,15 @@ class Company extends Organization {
 		super();
 		this.type     = words.company.type.random();
 		this.fullName = this._getFullName();
+    this.name     = this.fullName;
 		//console.log(`Company created: ${this.name}`);
 	}
-	// Get a random company name
+	// Get a random company name, randomly add a space between two parts of the name
 	_getRandomName() {
 		const companyStart = words.company.start.random();
 		const companyEnd   = words.company.end.random();
-		return `${companyStart}${companyEnd}`;
+    const space = rand(0, 1) == 1 ? ' ' : '';
+		return `${companyStart}${space}${companyEnd}`;
 	}
 	// Get full company name
 	_getFullName() {
@@ -51,7 +53,7 @@ class Association extends Organization {
 	}
 }
 
-// Association class
+// Foundation class
 class Foundation extends Organization {
 	constructor() {
 		super();
@@ -59,6 +61,9 @@ class Foundation extends Organization {
 	}
 	// Get a random foundation name
 	_getRandomName() {
-		return "Foundation";
+		const foundationStart = words.foundation.start.random();
+		const foundationEnd   = words.foundation.end.random();
+		const foundation = `${foundationStart} ${foundationEnd}`;
+    return rand(0, 1) == 0 ? `Foundation for ${foundation}` : `${foundation} Foundation`;
 	}
 }

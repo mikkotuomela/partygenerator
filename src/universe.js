@@ -3,7 +3,7 @@ const config = {
   minDays:        180,
   dayRange:       300,
   locale:         'en-US',
-  competitions:   10,
+  competitions:   rand(7, 11),
   fakerAvailable: testFaker(),
   universe: {
     group: {
@@ -24,7 +24,7 @@ const config = {
       maxAge:     55
     },
     speaker: {
-      population: 10,
+      population: rand(3, 6),
       minAge:     25,
       maxAge:     65
     },
@@ -80,6 +80,7 @@ class Universe {
 
   // Pop one entity and check if new ones need to be created
   _getEntity(entityType) {
+    console.log(`Returning entity: ${entityType}`);
     const newEntity = this[entityType].pop();
     if (this[entityType].length == 0)
       this[entityType] = this._getRandomEntities(entityType);
@@ -90,10 +91,11 @@ class Universe {
   getPerson()      { return this._getEntity('person');  }
   getScener()      { return this._getEntity('scener');  }
   getGamer()       { return this._getEntity('gamer');   }
+  getSpeaker()     { return this._getEntity('speaker'); }
   getCompany()     { return this._getEntity('company'); }
   getGroup()       { return this._getEntity('group');   }
-  getAssociation() { return this._getEntity('group');   }
-  getFoundation()  { return this._getEntity('group');   }
+  getAssociation() { return this._getEntity('association');   }
+  getFoundation()  { return this._getEntity('foundation');   }
 
 }
 

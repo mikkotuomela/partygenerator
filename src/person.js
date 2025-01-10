@@ -5,6 +5,7 @@ class Person {
 		this.lastName  = words.name.last.random();
 		this.name      = `${this.firstName} ${this.lastName}`;
     this.title     = words.name.title.random();
+    this.job       = words.name.job.random();
     this.ageInDays = this._getRandomAgeInDays();
     this.birthday  = this._getBirthday();
 		//console.log(`Person created: ${this.name}`);
@@ -25,9 +26,20 @@ class Person {
 class Speaker extends Person {
   constructor() {
     super();
+    this.org = this._getRandomOrg();
   }
   _getRandomAgeInDays() {
     return rand(config.universe.speaker.minAge * 365, config.universe.speaker.maxAge * 365);
+  }
+  // Get a random organization (three options)
+  _getRandomOrg() {
+    const orgType = rand(1, 3);
+    if (orgType == 1)
+      return new Company();
+    else if (orgType == 2)
+      return new Association();
+    else
+      return new Foundation();
   }
 }
 

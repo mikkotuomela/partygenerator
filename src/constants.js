@@ -6,9 +6,13 @@ const wordLists = {
     end:    'Party Event Meeting Happening Encounter Copyparty Gathering Party Party Megaparty Artparty Evening Weekend Assembly Afterparty Jamboree Conference Convention Unconference Workshop Jam Cruise',
   },
   company: {
-    start:  'Fish Tech Graph Angry Micro Mega Best Computer Game Video',
-    end:    'Birds Wizards Hub Tube App Team',
-    type:   'Ltd Oy Oyj Plc Corp Corporation',
+    start:  'Fish Tech Graph Angry Micro Mega Best Computer Fun Rad Space Game Video Cloud Up Down Scene Bit House Blood Future Super Hyper Cyber Techno Steam Game Rock',
+    end:    'Birds Wizards Hub Tube App Team Cloud House Marque Crew Soft Tech Craft Team Coders Works Net Machines',
+    type:   'Ltd Oy Oyj Plc Corp Corporation Inc',
+  },
+  foundation: {
+    start: 'Technology Tech Health Internet Network Electronic Graphics Demoscene Finland Assembly Coding Political',
+    end:   'Protection Fund Support Promotion Frontiers Workers Union Forever Friends Seniors'
   },
   venue: {
     end:    'Hall Colosseum Stadium Arena Center eSportsCenter eSportsArena Theatre Cinema Sauna Room Basement Restaurant Club',
@@ -16,7 +20,8 @@ const wordLists = {
   name: {
     first:  'Mikko Kristoffer Felice Anni Kim Matti Chris Nick Pekka Al Jeff',
     last:   'Tuomela Lawson Murtosaari Viljanen Koskimies Spowart Lowe Minter Virtanen Smith Hubbard Laakkonen Aakko',
-    title:  'Dr Dr Dr Prof Mr Mrs Miss CEO CTO CIO',
+    title:  'Dr. Dr. Dr. Prof. Mr. Mr. Mx. Ms. Ms.',
+    job:    'CIO CTO CFO CEO President Chairman Chairperson Producer Founder Co-Founder ex-CEO Developer Coder Artist Recruiter Boss Director Lawyer'
   },
   handle: {
     start:  'Fake Big Bad Cute Dark Murder Laser Darth Dr Mr Sir Mrs Miss Professor Real True Mini Max Pissed Wiz Lol Bass Magic Rave Cereal Techno',

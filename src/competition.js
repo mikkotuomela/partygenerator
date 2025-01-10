@@ -1,8 +1,13 @@
 // Competition class
 class Competition {
 	constructor() {
-		this.sponsor = universe.getCompany();
-		this.name    = this._getRandomName();
+		this.sponsor     = universe.getCompany();
+    this.unofficial  = rand(1, 10) == 1
+    this.sponsored   = rand(1, 10) == 1
+    this.sponsorText = `sponsored by ${this.sponsor.fullName}`;
+    this.plainName   = this._getRandomName();
+		this.name        = this.unofficial ? `Unofficial ${this.plainName}` : this.plainName;
+    this.sponsorName = this.sponsored  ? `${this.name}${this.sponsorText}` : this.name;
 		console.log(`Competition created: ${this.name}`);
 	}
 	// Generate a competition name
@@ -12,13 +17,6 @@ class Competition {
 		const competitionType  = words.competition.type.random();
 		const competitionWord  = words.competition.word.random();
 		let competitionName    = `${competitionStart} ${competitionEnd} ${competitionType} ${competitionWord}`;
-
-    // Random modifications
-  	if (rand(10, 1) == 1)
-			competitionName = `Unofficial ${competitionName}`;
-		if (rand(10, 1) == 1)
-			competitionName = `${competitionName} sponsored by ${this.sponsor.fullName}`;
-    
-		return competitionName;
-	}
+    return competitionName;
+  }
 }
