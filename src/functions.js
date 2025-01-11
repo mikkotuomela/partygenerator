@@ -3,6 +3,17 @@ function rand(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// Format money
+function money(amount) {
+  const formatted = new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+    useGrouping: true
+  }).format(amount);
+  //return `${formatted.replace(/,/g, ' ')} &euro;`; // Replace commas with spaces
+  return `${formatted} &euro;`;
+}
+
 // Add random() method to array prototype
 // If n == 1, return a random element
 // If n != 1, return n elements as an array

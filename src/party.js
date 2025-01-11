@@ -48,7 +48,7 @@ class Party {
     // Result
     this.totalIncome        = this.sponsorsTotal + this.partyEventsTotal;
     this.totalExpenses      = this.expensesTotal;
-    this.damage             = rand(0, 1) == 0 ? -this.ticketsTotal * rand(1, 10) : 0;
+    this.damage             = rand(0, 1) == 0 ? -this.ticketsTotal * rand(1, 20) : 0;
     this.prizeMoney         = -this.combinedTotal / 10 * rand(10, 100) * 0.01;
     this.totalResult        = this.totalIncome + this.totalExpenses + this.damage + this.prizeMoney;
 
@@ -71,7 +71,7 @@ class Party {
     let sponsors = [];
     for (let sponsor_i = 0; sponsor_i < config.sponsors; sponsor_i++) {
       if (sponsor_i == 0)
-        sponsors.push(new Sponsor(this.mainSponsor, 'is the main sponsor for the event', 0.01 * rand(5, 40) * total));
+        sponsors.push(new Sponsor(this.mainSponsor, 'is the main sponsor for the event', 0.01 * rand(5, 60) * total));
       else
         sponsors.push(new Sponsor(this._getRandomOrg(), 'sponsors the event', 0.01 * rand(0, 10) * total));
     }
@@ -109,35 +109,35 @@ class Party {
   // Get html for all events
   getEventsHtml(events) {
     let html = [];
-    events.forEach(event => { html.push(`${event.actor.name} ${event.event}: ${event.amount.toFixed(2)} €`); });
+    events.forEach(event => { html.push(`${event.actor.name} ${event.event}: ${money(event.amount)}`); });
     const total = this.getEventsTotal(events);
-    html.push(`Total: ${total.toFixed(2)}`);
+    html.push(`Total: ${money(total)}`);
     return html.join('<br />');
   }
   // Get ticket sales html
   getTicketsHtml() {
     return [
-      `Presale tickets: ${this.ticketsPresale} x ${this.ticketPricePresale.toFixed(2)} € = ${this.presaleTotal.toFixed(2)} €`,
-      `Tickets sold at door: ${this.ticketsAtDoor} x ${this.ticketPriceAtDoor.toFixed(2)} € = ${this.atDoorTotal.toFixed(2)} €`,
+      `Presale tickets: ${this.ticketsPresale} x ${money(this.ticketPricePresale)} = ${money(this.presaleTotal)}`,
+      `Tickets sold at door: ${this.ticketsAtDoor} x ${money(this.ticketPriceAtDoor)} = ${money(this.atDoorTotal)}`,
       `Visitors total: ${this.ticketsTotal}`,
-      `Ticket sales total: ${this.combinedTotal.toFixed(2)} €`
+      `Ticket sales total: ${money(this.combinedTotal)}`
     ].join('<br />');
   }
   // Get party events html
   getPartyEventsHtml() {
     return [
-      `Merchandise sold: ${this.merchandiseSold.toFixed(2)} €`,
-      `Food sold: ${this.foodSold.toFixed(2)} €`,
-      `Party events total: ${this.partyEventsTotal.toFixed(2)} €`
+      `Merchandise sold:   ${money(this.merchandiseSold)}`,
+      `Food sold:          ${money(this.foodSold)}`,
+      `Party events total: ${money(this.partyEventsTotal)}`
     ].join('<br />');
   }
   getTotalHtml() {
     return [
-      `Total income: ${this.totalIncome.toFixed(2)} €`,
-      `Expenses before party: ${this.totalExpenses.toFixed(2)} €`,
-      `Cash prizes for competitions: ${this.prizeMoney.toFixed(2)} €`,
-      `Damage to party place: ${this.damage.toFixed(2)} €`,
-      `<span class="competition">Final result: ${this.totalResult.toFixed(2)} €</span>`
+      `Total income:                 ${money(this.totalIncome)}`,
+      `Expenses before party:        ${money(this.totalExpenses)}`,
+      `Cash prizes for competitions: ${money(this.prizeMoney)}`,
+      `Damage to party place:        ${money(this.damage)}`,
+      `<span class="competition">Final result: ${money(this.totalResult)}</span>`
     ].join('<br />');
   }
 }
